@@ -1,0 +1,101 @@
+.experience-container {
+    max-width: 1150px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Judul Utama Halaman */
+.main-title {
+    font-size: 36px;
+    color: #1d2939;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+/* Sub-Group (Pengalaman Organisasi / Kerja) */
+.experience-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.section-subtitle {
+    font-size: 22px;
+    color: #1d2939;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+/* Styling Card */
+.experience-card {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    border-left: 5px solid #a855f7; /* Warna ungu yang mirip di foto */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-card h2 {
+    font-size: 22px;
+    color: #1d2939;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.experience-card h3 {
+    color: #a855f7;
+    font-size: 16px;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.experience-card span {
+    color: #98a2b3;
+    font-size: 14px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.experience-card ul {
+    padding-left: 20px;
+}
+
+.experience-card li {
+    margin-bottom: 10px;
+    color: #475467;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Hover Effect */
+.experience-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(124, 58, 237, 0.1);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 30px;
+    }
+    
+    .section-subtitle {
+        font-size: 18px;
+    }
+
+    .experience-card {
+        padding: 20px;
+    }
+
+    .experience-card h2 {
+        font-size: 18px;
+    }
+    
+    .experience-card li {
+        font-size: 14px;
+    }
+}

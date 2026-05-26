@@ -1,0 +1,170 @@
+/* CONTAINER UTAMA */
+.projects-container {
+    max-width: 1150px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.page-title h1 {
+    font-size: 36px;
+    color: #1d2939;
+    font-weight: 700;
+}
+
+.project-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.section-subtitle {
+    font-size: 22px;
+    color: #1d2939;
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   STYLE: PHOTOGRAPHY WORKS (GRID 2 KOLOM)
+   ========================================================================== */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.project-card {
+    background: white;
+    border-radius: 16px; /* Disesuaikan agar melengkung rapi modern */
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* MENGUBAH UKURAN FOTO MENJADI KOTAK 1x1 */
+.project-card-img {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Memaksa gambar berbentuk persegi sempurna (1x1) */
+    object-fit: cover;   /* Memastikan jepretan foto tidak gepeng/ketarik */
+    display: block;
+}
+
+.project-content {
+    padding: 25px;
+}
+
+.project-content h2 {
+    font-size: 18px;
+    color: #1d2939;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.project-content p {
+    font-size: 14px;
+    color: #475467;
+    line-height: 1.6;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+/* ==========================================================================
+   STYLE: PHOTOGRAPHY GEAR (FIXED GRID KOTAK 4 KOLOM)
+   ========================================================================== */
+.gear-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important; /* Pas mengunci 4 kolom kesamping */
+    gap: 20px !important;
+    width: 100% !important;
+    box-sizing: border-box;
+}
+
+.gear-card {
+    background: white !important;
+    padding: 25px 15px !important;
+    border-radius: 16px !important;
+    display: flex !important;
+    flex-direction: column !important; /* Foto di atas, teks nama di bawah */
+    align-items: center !important;    /* Konten center di tengah kotak */
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 15px !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.03) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100% !important;
+    box-sizing: border-box;
+}
+
+.gear-icon {
+    /* Kita buat ukuran kotak 1:1 yang jauh lebih besar dan dominan */
+    width: 110px !important;    
+    height: 110px !important;  
+    border-radius: 16px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+    overflow: hidden !important;
+}
+
+.gear-img {
+    width: 100% !important;
+    height: 100% !important;
+    /* 💡 TIPS: Ganti ke 'contain' kalau gamau ada objek foto yang terpotong sama sekali, 
+       atau tetap gunakan 'cover' kalau mau fotonya penuh memenuhi kotak 110px */
+    object-fit: cover !important; 
+    display: block !important;
+}
+
+/* Background warna soft bawaan */
+.icon-blue { background: #eff8ff !important; }
+.icon-green { background: #edfcf2 !important; }
+.icon-purple { background: #f5f3ff !important; }
+.icon-orange { background: #fff7ed !important; }
+
+.gear-card h3 {
+    font-size: 15px !important;
+    color: #1d2939 !important;
+    font-weight: 600 !important;
+    margin: 0 !important;
+    line-height: 1.4 !important;
+}
+
+.gear-card:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06) !important;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (Biar pas dibuka di HP/Tablet tetep estetik)
+   ========================================================================== */
+@media (max-width: 992px) {
+    .gear-grid {
+        grid-template-columns: repeat(2, 1fr) !important; /* Di tablet jadi formasi 2x2 */
+    }
+}
+
+@media (max-width: 576px) {
+    .gear-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+    }
+    .gear-card {
+        padding: 20px 10px !important; /* Naikin dikit paddingnya biar seimbang */
+    }
+    
+    /* Ukuran kotak 1:1 yang pas untuk layar HP */
+    .gear-icon {
+        width: 85px !important;
+        height: 85px !important;
+    }
+    
+    .gear-card h3 {
+        font-size: 13px !important;
+    }
+}
